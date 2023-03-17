@@ -190,7 +190,7 @@ class Subscription
         $beforeMonth = (int)$dateTime->format("m");        
         $dateTime->add(new DateInterval("P{$nextMonth}M"));
 
-        //다다음달로 지정될경우
+        //다다음달로 지정될 경우
         if ($beforeMonth + $nextMonth < (int)$dateTime->format('m')) {
             $dateTime->sub(new DateInterval("P1M"));
             return $dateTime->format("Y-m-t");
